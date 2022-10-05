@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Box</title>
+</head>
+<body>
+
+<form id="TextBox">
+    <input type="text">
+    <input type="reset" value="Clear"/>
+</form>
+
+<input type="button" value="Hide" onclick="f()"/>
+<input type="button" value="Show" onclick="s()"/>
+
+<script>
+    function f() {
+        document.getElementById("TextBox").style.display = "none"
+    }
+    function s() {
+        document.getElementById("TextBox").style.display = "block"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <link href="/resources/boxStyle.css" rel="stylesheet">
+    <link href="/resources/buttonStyle.css" rel="stylesheet">
+    <link href="/resources/center.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Add link</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/website}" th:object="${link}" >
+    <input type="text" th:field="*{nameLink}" id="name" placeholder="Name link"/>
+    </br>
+    </br>
+    <input type="text" th:field="*{link}" id="id" placeholder="Link"/>
+    </br>
+    </br>
+    <input type="submit" value="Create" class="green">
+</form>
+</body>
+</html>

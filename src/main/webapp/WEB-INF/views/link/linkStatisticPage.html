@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <link href="/resources/buttonStyle.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Statistic</title>
+</head>
+<body>
+<center>
+    <div th:each="link : ${links}" class="div">
+    <b class="b">Id:</b>
+    <tagname class="b" th:text="${link.getId()}"></tagname>
+    </br>
+    <b class="b">Name:</b>
+    <tagname class="b" th:text="${link.getNameLink()} " name="name"></tagname>
+    </br>
+    <b class="b">Link: </b>
+    <tagname class="b" th:text="${link.getLink()} " name="link"></tagname>
+    </br>
+    <b class="b">Session counter:</b>
+    <tagname class="b" th:text="${link.getSessionCounter()} " name="counter"></tagname>
+    </br>
+    <form th:method="DELETE" th:action="@{/website/{id}(id=${link.getId()})}">
+        <input type="submit" value="Delete" class="green"/>
+    </form>
+    <hr>
+    </div>
+</center>
+</body>
+</html>
